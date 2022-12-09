@@ -16,6 +16,14 @@ When(/^I login with (\w+) and (.+)$/, async (username, password) => {
 });
 
 Then(/^I should see a text saying (.*)$/, async (message) => {
-  await expect(SecurePage.welcomeText).toBeExisting();
-  await expect(SecurePage.welcomeText).toHaveTextContaining(message);
+  if (message == "Error!") {
+    // invalid username or password
+    await expect(SecurePage.errorText).toBeExisting();
+    await expect(SecurePage.errorText).toHaveTextContaining(message);
+  } else {
+    // valid username or password
+    await expect(SecurePage.welcomeText).toBeExisting();
+    await expect(SecurePage.welcomeText).toHaveTextContaining(message);
+    await SecurePage.logoutBtn.click();
+  }
 });

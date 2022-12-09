@@ -10,7 +10,15 @@ class SecurePage extends Page {
    * define selectors using getter methods
    */
   public get welcomeText() {
-    return $("#leftPanel > p");
+    return $("#rightPanel > div > div > h1");
+  }
+
+  public get errorText() {
+    return $("#rightPanel > h1");
+  }
+
+  public get logoutBtn() {
+    return $("#leftPanel > ul > li:nth-child(8) > a");
   }
 }
 

@@ -6,5 +6,6 @@ Feature: The Internet Guinea Pig Website
     Then I should see a text saying <message>
 
     Examples: 
-      | username | password | message      |
-      | pp       | pp       | Welcome pp p |
+      | username | password | message           |
+      | pp       | pp       | Accounts Overview |
+      | aa       | ep       | Error!            |
