@@ -1,4 +1,4 @@
-Feature: The Internet Guinea Pig Website
+Feature: Para Bank Login Feature
 
   Scenario Outline: As a user, I can log into the secure area
     Given I am on the login page
@@ -6,6 +6,6 @@ Feature: The Internet Guinea Pig Website
     Then I should see a text saying <message>
 
     Examples: 
-      | username | password | message           |
-      | pp       | pp       | Accounts Overview |
-      | aa       | ep       | Error!            |
+      | username        | password | message           |
+      | pp              | pp       | Accounts Overview |
+      | invalidUsername | password | Error!            |
