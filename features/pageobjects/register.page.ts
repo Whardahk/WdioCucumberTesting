@@ -9,6 +9,11 @@ class RegisterPage extends Page {
   /**
    * define selectors using getter methods
    */
+
+  public get registBtn() {
+    return $("#loginPanel > p:nth-child(3) > a");
+  }
+
   public get inputFirstName() {
     return $('input[name="customer.firstName"]');
   }

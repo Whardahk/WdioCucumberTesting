@@ -20,6 +20,18 @@ class SecurePage extends Page {
   public get logoutBtn() {
     return $("#leftPanel > ul > li:nth-child(8) > a");
   }
+
+  public get registText() {
+    return $("#rightPanel > h1");
+  }
+
+  public get passwordError() {
+    return $("span[id='repeatedPassword.errors']");
+  }
+
+  public get usernameExists() {
+    return $("span[id='customer.username.errors']");
+  }
 }
 
 export default new SecurePage();
