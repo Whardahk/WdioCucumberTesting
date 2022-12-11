@@ -33,7 +33,7 @@ Then(/^I should see a text saying (.*)$/, async (message) => {
 
 //REGISTER
 When(
-  /^I register with (\w+) and (\w+) and (\w+) and (\w+) and (\w+) and (\w+) and (\w+) and (\w+) and (\w+) and (.+) and (.+)$/,
+  /^I register with (.*) and (.*) and (.*) and (.*) and (.*) and (.*) and (.*) and (.*) and (.*) and (.*) and (.*)$/,
   async (
     firstName,
     lastName,
